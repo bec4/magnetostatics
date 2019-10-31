@@ -1,7 +1,3 @@
-module Coils
-
-export normalCoil, coilStack
-
 # Function that returns the path coordinates of a regularly wound coil. First we spiral up, the number of windings equal to
 # `pitches,` then we spiral down, repeating this process `nlayer` times. 
 function normalCoil(startingAngle, pitches, nlayers, bucketWallRadius, sign, wt=3.5, angRes=0.003, zpos = 0)
@@ -13,7 +9,7 @@ function normalCoil(startingAngle, pitches, nlayers, bucketWallRadius, sign, wt=
     
     # Angles associated with top/bottom layers of each spiral
     extremaAng = range(startingAngle + angRes, startingAngle + 2*pi, step = angRes);
-    
+
     for layer=1:nlayers
         radius = bucketWallRadius + (layer-1)*wt + wt/2;
        
@@ -70,6 +66,4 @@ function coilStack(startingAngle, turns, bucketWallRadius, sign, wt=3.5, angRes=
     coreBottom[transitionLength + 1 : end, 3] = zpos * ones( length(coreBottom[transitionLength + 1 : end, 3]) )
         
     return vcat(coreTop, coreBottom)
-end
-
 end
