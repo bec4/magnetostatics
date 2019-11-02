@@ -1,5 +1,5 @@
 # magnetostatics
-Magnetostatics using brute-force application of the Biot-Savart law to wire elements. 
+Magnetostatics using brute-force application of the Biot-Savart law to wire elements. Requires BEC4's [Magnetostatics.jl](https://github.com/bec4/Magnetostatics.jl) to be installed (see page for installation instructions).
 
 ### Compatibility notes
 This notebook was originally written in Julia 0.6.x. There have been some changes in both syntax and definition of base functions. The following adaptions have been made to this notebook to make it compatible with newer versions (Julia 1.x).
